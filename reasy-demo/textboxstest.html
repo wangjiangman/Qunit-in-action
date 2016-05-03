@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>toTextboxstest</title>
+<link rel="stylesheet" href="../reasy-ui.css">
+<link rel="stylesheet" href="demo.css">
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script src="../reasy-ui-0.6.js"></script>	
+<style>
+</style>
+</head>
+<body>
+
+
+<div class="demo-panel">
+	<div class="control-group component">IP Text boxs test</div>
+
+	<div class="control-group">
+		<label for="" class="control-label">IP: </label>
+		<div class="controls">
+			<span id="textBoxElemIP"></span>
+		</div>
+	</div>
+
+
+	<div class="control-group">
+		<label for="" class="control-label">Disable the widget</label>
+		<div class="controls">
+			<input type="button" value="Disable" id="btnDisable" class="btn">
+			<input type="button" value="Enable" id="btnEnable" class="btn">
+		</div>
+	</div>
+
+
+	<div class="control-group">
+		<label for="" class="control-label">
+			Get val
+		</label>
+		<div class="controls">
+			<input type="button" value="$('#ip').val()" class="btn" id="btnGetIPVal">&nbsp;
+			<span class="help-inline" id="textIPVal"></span>
+		</div>
+	</div>
+</div>
+
+<div class="demo-panel">
+	<div class="control-group component">MAC Text boxs test</div>
+
+	<div class="control-group">
+		<label for="" class="control-label">MAC: </label>
+		<div class="controls">
+			<span id="textBoxElemMAC"></span>
+		</div>
+	</div>
+	
+	<div class="control-group">
+		<label for="" class="control-label">
+			Get val
+		</label>
+		<div class="controls">
+			<input type="button" value="$('#textBoxElemMAC').val()" class="btn" id="btnGetMacVal">&nbsp;
+			<span class="help-inline" id="textMacVal"></span>
+		</div>
+	</div>
+</div>
+
+
+<script>
+$('#textBoxElemIP').toTextboxs('ip');
+
+$('#btnDisable').on('click', function() {
+	$('#textBoxElemIP').disable(true);
+});
+$('#btnEnable').on('click', function() {
+	$('#textBoxElemIP').disable(false);
+});
+$('#btnGetIPVal').on('click', function() {
+	$('#textIPVal').text($('#textBoxElemIP').val());
+});
+
+
+$('#textBoxElemMAC').toTextboxs('mac');
+$('#btnGetMacVal').on('click', function() {
+	$('#textMacVal').text($('#textBoxElemMAC').val());
+});
+</script>
+</body>
+</html>

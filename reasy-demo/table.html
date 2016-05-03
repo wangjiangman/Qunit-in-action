@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Table Page Test</title>
+    <link rel="stylesheet" href="../reasy-ui.css">
+    <link rel="stylesheet" href="demo.css">
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../reasy-ui-0.6.js"></script>
+</head>
+
+<body>
+    <div class="demo-panel">
+        <div class="control-group component">Table Test</div>
+        <div>
+            <table id="tableDemo" style="width:50%">
+                <thead>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <script>
+    var dataObj = [{
+        ip: "192.168.0.2",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:12"
+    }, {
+        ip: "192.168.0.3",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:13"
+    }, {
+        ip: "192.168.0.4",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:14"
+    }, {
+        ip: "192.168.0.5",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:15"
+    }, {
+        ip: "192.168.0.1",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:13"
+    }, {
+        ip: "192.168.0.4",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:14"
+    }, {
+        ip: "192.168.0.5",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:15"
+    }, {
+        ip: "192.168.0.3",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:13"
+    }, {
+        ip: "192.168.0.4",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:14"
+    }, {
+        ip: "192.168.0.5",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:15"
+    }, {
+        ip: "192.168.0.3",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:13"
+    }, {
+        ip: "192.168.0.4",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:14"
+    }, {
+        ip: "192.168.0.5",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:15"
+    }, {
+        ip: "192.168.0.3",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:13"
+    }, {
+        ip: "192.168.0.4",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:14"
+    }, {
+        ip: "192.168.0.5",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:15"
+    }, {
+        ip: "192.168.0.3",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:13"
+    }, {
+        ip: "192.168.0.4",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:14"
+    }, {
+        ip: "192.168.0.5",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:15"
+    }, {
+        ip: "192.168.0.3",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:13"
+    }, {
+        ip: "192.168.0.4",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:14"
+    }, {
+        ip: "192.168.0.5",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:15"
+    }, {
+        ip: "192.168.0.3",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:13"
+    }, {
+        ip: "192.168.0.4",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:14"
+    }, {
+        ip: "192.168.0.5",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:15"
+    }, {
+        ip: "192.168.0.3",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:13"
+    }, {
+        ip: "192.168.0.4",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:14"
+    }, {
+        ip: "192.168.0.5",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:15"
+    }, {
+        ip: "192.168.0.3",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:13"
+    }, {
+        ip: "192.168.0.4",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:14"
+    }, {
+        ip: "192.168.0.5",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:15"
+    }, {
+        ip: "192.168.0.3",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:13"
+    }, {
+        ip: "192.168.0.4",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:14"
+    }, {
+        ip: "192.168.0.5",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:15"
+    }, {
+        ip: "192.168.0.3",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:13"
+    }, {
+        ip: "192.168.0.4",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:14"
+    }, {
+        ip: "192.168.0.5",
+        mask: "255.255.255.0",
+        mac: "12:12:12:12:12:15"
+    }];
+
+    var config0 = {
+        tHead: ["", "index", "ip", "mask", "mac"],
+        showSearch: true,
+        searchBtn: "搜索列表",
+    }
+
+    // When table not exists.Just like $("#nothing") below
+    try {
+        // var invalidTable = $("#nothing").tableView(dataObj, config0);
+        // When config undefined
+        var invalidTable = $("#nothing").tableView(dataObj, config);
+        invalidTable.init();
+    } catch (err) {
+        $.alert(err.message);
+    }
+
+    // Let's see the correct example
+    var table = $("#tableDemo").tableView(dataObj, config0);
+    table.init();
+
+    // cross domin get data
+    /*
+    var config1 = {
+        tHead: ["", "index", "ip", "mask", "mac"],
+        showSearch: true,
+        searchBtn: "搜索列表",
+        showStyle: 0,
+        updateCallback: function(data, done) {
+            var that = this;
+            $.getJSON('./table.json?' + Math.random(), {
+                entry: data.perNum || 25,
+                page: that.btn.currentIndex
+
+            }, function(res) {
+                var userInfo = res;
+                //your code
+                that.pageNum = Math.ceil(userInfo.length / that.perNum);
+                done(userInfo);
+            });
+        }
+    };
+
+    var table = $("#tableDemo").tableView("", config1);
+    table.init();*/
+    </script>
+</body>
+
+</html>
